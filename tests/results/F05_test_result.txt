@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/work/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/work/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 16 items
+
+tests/test_occlusion.py::TestCheckBedOcclusion::test_ray_through_bed PASSED [  6%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_ray_misses_bed PASSED [ 12%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_target_on_bed_surface PASSED [ 18%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_camera_above_target_on_bed PASSED [ 25%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_camera_above_through_bed_to_floor PASSED [ 31%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_ray_passes_beside_bed PASSED [ 37%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_z_parallel_outside_bed_xy PASSED [ 43%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_z_parallel_inside_bed_xy PASSED [ 50%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_batch_mixed PASSED  [ 56%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_single_point_shape PASSED [ 62%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_camera_equals_target PASSED [ 68%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_target_inside_bed PASSED [ 75%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_all_not_occluded PASSED [ 81%]
+tests/test_occlusion.py::TestCheckBedOcclusion::test_ray_grazes_aabb_edge PASSED [ 87%]
+tests/test_occlusion.py::TestCheckBedOcclusionMultiCamera::test_multi_camera PASSED [ 93%]
+tests/test_occlusion.py::TestRayAabbIntersect::test_known_intersection PASSED [100%]
+
+============================== 16 passed in 0.10s ==============================

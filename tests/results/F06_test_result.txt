@@ -1,0 +1,27 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/work/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/work/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 18 items
+
+tests/test_visibility.py::TestCheckVisibilityBasic::test_a1_in_frustum_no_occlusion PASSED [  5%]
+tests/test_visibility.py::TestCheckVisibilityBasic::test_a2_outside_frustum PASSED [ 11%]
+tests/test_visibility.py::TestCheckVisibilityBasic::test_a3_in_frustum_occluded PASSED [ 16%]
+tests/test_visibility.py::TestCheckVisibilityBasic::test_a4_bed_surface_no_occlusion PASSED [ 22%]
+tests/test_visibility.py::TestCheckVisibilityBasic::test_a5_near_clip PASSED [ 27%]
+tests/test_visibility.py::TestCheckVisibilityBasic::test_a6_far_clip PASSED [ 33%]
+tests/test_visibility.py::TestCheckVisibilityEdgeCases::test_b1_single_point_shape PASSED [ 38%]
+tests/test_visibility.py::TestCheckVisibilityEdgeCases::test_b2_batch_mixed PASSED [ 44%]
+tests/test_visibility.py::TestCheckVisibilityEdgeCases::test_b3_custom_near_far PASSED [ 50%]
+tests/test_visibility.py::TestCheckVisibilityEdgeCases::test_b4_custom_eps PASSED [ 55%]
+tests/test_visibility.py::TestCheckVisibilityMultiCamera::test_c1_result_shape PASSED [ 61%]
+tests/test_visibility.py::TestCheckVisibilityMultiCamera::test_c2_camera_independence PASSED [ 66%]
+tests/test_visibility.py::TestCheckVisibilityMultiCamera::test_c3_visible_count_f07_connection PASSED [ 72%]
+tests/test_visibility.py::TestCheckVisibilityMultiCamera::test_c4_empty_cameras PASSED [ 77%]
+tests/test_visibility.py::TestCheckVisibilityMultiCamera::test_c5_single_camera_matches_check_visibility PASSED [ 83%]
+tests/test_visibility.py::TestConsistencyWithF04F05::test_d1_consistency_with_frustum_no_occlusion PASSED [ 88%]
+tests/test_visibility.py::TestConsistencyWithF04F05::test_d2_consistency_with_occlusion_all_in_frustum PASSED [ 94%]
+tests/test_visibility.py::TestConsistencyWithF04F05::test_d3_realistic_scenario PASSED [100%]
+
+============================== 18 passed in 0.08s ==============================

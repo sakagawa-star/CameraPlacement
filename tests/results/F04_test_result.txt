@@ -1,0 +1,37 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/work/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/work/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 28 items
+
+tests/test_frustum.py::TestFrustumCheckerCreation::test_normal_creation PASSED [  3%]
+tests/test_frustum.py::TestFrustumCheckerCreation::test_negative_near_raises PASSED [  7%]
+tests/test_frustum.py::TestFrustumCheckerCreation::test_far_lte_near_raises PASSED [ 10%]
+tests/test_frustum.py::TestFrustumCheckerCreation::test_near_zero_allowed PASSED [ 14%]
+tests/test_frustum.py::TestIsVisible::test_look_at_point_visible PASSED  [ 17%]
+tests/test_frustum.py::TestIsVisible::test_forward_point_visible PASSED  [ 21%]
+tests/test_frustum.py::TestIsVisible::test_behind_camera_not_visible PASSED [ 25%]
+tests/test_frustum.py::TestIsVisible::test_too_close_not_visible PASSED  [ 28%]
+tests/test_frustum.py::TestIsVisible::test_too_far_not_visible PASSED    [ 32%]
+tests/test_frustum.py::TestIsVisible::test_hfov_boundary_inside PASSED   [ 35%]
+tests/test_frustum.py::TestIsVisible::test_hfov_boundary_outside PASSED  [ 39%]
+tests/test_frustum.py::TestIsVisible::test_vfov_boundary_inside PASSED   [ 42%]
+tests/test_frustum.py::TestIsVisible::test_vfov_boundary_outside PASSED  [ 46%]
+tests/test_frustum.py::TestIsVisible::test_fov_boundary_exact PASSED     [ 50%]
+tests/test_frustum.py::TestIsVisible::test_batch_mixed_visibility PASSED [ 53%]
+tests/test_frustum.py::TestIsVisible::test_single_point_shape PASSED     [ 57%]
+tests/test_frustum.py::TestIsVisible::test_large_batch_performance PASSED [ 60%]
+tests/test_frustum.py::TestIsVisible::test_tilted_camera PASSED          [ 64%]
+tests/test_frustum.py::TestGetFrustumCorners::test_corners_shape PASSED  [ 67%]
+tests/test_frustum.py::TestGetFrustumCorners::test_near_corners_at_near_distance PASSED [ 71%]
+tests/test_frustum.py::TestGetFrustumCorners::test_far_corners_at_far_distance PASSED [ 75%]
+tests/test_frustum.py::TestGetFrustumCorners::test_all_corners_visible PASSED [ 78%]
+tests/test_frustum.py::TestGetFrustumCorners::test_near_face_width PASSED [ 82%]
+tests/test_frustum.py::TestGetFrustumPlanes::test_planes_shape PASSED    [ 85%]
+tests/test_frustum.py::TestGetFrustumPlanes::test_inside_point_all_planes PASSED [ 89%]
+tests/test_frustum.py::TestGetFrustumPlanes::test_outside_point_at_least_one_plane PASSED [ 92%]
+tests/test_frustum.py::TestIsVisibleConsistency::test_z_axis_camera PASSED [ 96%]
+tests/test_frustum.py::TestIsVisibleConsistency::test_project_to_image_consistency PASSED [100%]
+
+============================== 28 passed in 0.09s ==============================

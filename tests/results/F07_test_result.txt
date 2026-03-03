@@ -1,0 +1,34 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/work/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/work/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 25 items
+
+tests/test_coverage.py::TestCalculateCoverageStats::test_a1_all_visible PASSED [  4%]
+tests/test_coverage.py::TestCalculateCoverageStats::test_a2_partial_visibility PASSED [  8%]
+tests/test_coverage.py::TestCalculateCoverageStats::test_a3_all_invisible PASSED [ 12%]
+tests/test_coverage.py::TestCalculateCoverageStats::test_a4_coverage_at_least_thresholds PASSED [ 16%]
+tests/test_coverage.py::TestCalculateCoverageStats::test_a5_min_max_mean PASSED [ 20%]
+tests/test_coverage.py::TestCalculateCoverageStats::test_a6_empty_points PASSED [ 24%]
+tests/test_coverage.py::TestCalculateCoverageStats::test_a7_single_point PASSED [ 28%]
+tests/test_coverage.py::TestCalculateCoverageStats::test_a8_non_2d_input PASSED [ 32%]
+tests/test_coverage.py::TestCalculateVolumeCoverage::test_b1_basic PASSED [ 36%]
+tests/test_coverage.py::TestCalculateVolumeCoverage::test_b2_visibility_matrix_shape PASSED [ 40%]
+tests/test_coverage.py::TestCalculateVolumeCoverage::test_b3_num_points_consistency PASSED [ 44%]
+tests/test_coverage.py::TestCalculateCoverage::test_c1_basic_default_volumes PASSED [ 48%]
+tests/test_coverage.py::TestCalculateCoverage::test_c2_custom_volumes PASSED [ 52%]
+tests/test_coverage.py::TestCalculateCoverage::test_c3_volume_coverages_keys PASSED [ 56%]
+tests/test_coverage.py::TestCalculateCoverage::test_c4_cameras_preserved PASSED [ 60%]
+tests/test_coverage.py::TestCalculateCoverage::test_c5_merged_grid_shape PASSED [ 64%]
+tests/test_coverage.py::TestCalculateCoverage::test_c6_visibility_matrix_shape_consistency PASSED [ 68%]
+tests/test_coverage.py::TestCalculateCoverage::test_c7_near_far_propagation PASSED [ 72%]
+tests/test_coverage.py::TestEdgeCases::test_d1_no_cameras PASSED         [ 76%]
+tests/test_coverage.py::TestEdgeCases::test_d2_all_visible PASSED        [ 80%]
+tests/test_coverage.py::TestEdgeCases::test_d3_grid_spacing PASSED       [ 84%]
+tests/test_coverage.py::TestEdgeCases::test_d4_empty_volumes PASSED      [ 88%]
+tests/test_coverage.py::TestRealWorldScenarios::test_e1_corner_placement PASSED [ 92%]
+tests/test_coverage.py::TestRealWorldScenarios::test_e2_volume_difference PASSED [ 96%]
+tests/test_coverage.py::TestRealWorldScenarios::test_e3_stats_consistency PASSED [100%]
+
+============================== 25 passed in 0.13s ==============================

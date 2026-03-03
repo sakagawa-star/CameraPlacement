@@ -1,0 +1,40 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/work/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/work/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 31 items
+
+tests/test_camera.py::TestCameraIntrinsics::test_default_values PASSED   [  3%]
+tests/test_camera.py::TestCameraIntrinsics::test_hfov PASSED             [  6%]
+tests/test_camera.py::TestCameraIntrinsics::test_vfov PASSED             [  9%]
+tests/test_camera.py::TestCameraIntrinsics::test_pixel_size PASSED       [ 12%]
+tests/test_camera.py::TestCameraIntrinsics::test_fx_fy PASSED            [ 16%]
+tests/test_camera.py::TestCameraIntrinsics::test_cx_cy PASSED            [ 19%]
+tests/test_camera.py::TestCameraIntrinsics::test_intrinsic_matrix PASSED [ 22%]
+tests/test_camera.py::TestCameraCreation::test_normal_creation PASSED    [ 25%]
+tests/test_camera.py::TestCameraCreation::test_same_position_look_at_raises PASSED [ 29%]
+tests/test_camera.py::TestCameraCreation::test_parallel_forward_up_hint_raises PASSED [ 32%]
+tests/test_camera.py::TestCameraCreation::test_list_input_converts_to_float64 PASSED [ 35%]
+tests/test_camera.py::TestCameraCreation::test_invalid_shape_raises PASSED [ 38%]
+tests/test_camera.py::TestLocalCoordinateSystem::test_forward_z_axis PASSED [ 41%]
+tests/test_camera.py::TestLocalCoordinateSystem::test_forward_x_axis PASSED [ 45%]
+tests/test_camera.py::TestLocalCoordinateSystem::test_forward_y_axis PASSED [ 48%]
+tests/test_camera.py::TestLocalCoordinateSystem::test_orthonormal_system PASSED [ 51%]
+tests/test_camera.py::TestLocalCoordinateSystem::test_rotation_matrix_orthonormal PASSED [ 54%]
+tests/test_camera.py::TestWorldToCamera::test_camera_position_is_origin PASSED [ 58%]
+tests/test_camera.py::TestWorldToCamera::test_look_at_on_z_axis PASSED   [ 61%]
+tests/test_camera.py::TestWorldToCamera::test_right_direction PASSED     [ 64%]
+tests/test_camera.py::TestWorldToCamera::test_up_direction PASSED        [ 67%]
+tests/test_camera.py::TestWorldToCamera::test_batch_processing PASSED    [ 70%]
+tests/test_camera.py::TestWorldToCamera::test_single_point_shape PASSED  [ 74%]
+tests/test_camera.py::TestProjectToImage::test_look_at_projects_to_center PASSED [ 77%]
+tests/test_camera.py::TestProjectToImage::test_behind_camera_returns_nan PASSED [ 80%]
+tests/test_camera.py::TestProjectToImage::test_image_right_upper PASSED  [ 83%]
+tests/test_camera.py::TestProjectToImage::test_batch_with_mixed_front_behind PASSED [ 87%]
+tests/test_camera.py::TestCreateCamera::test_default_intrinsics PASSED   [ 90%]
+tests/test_camera.py::TestCreateCamera::test_custom_intrinsics PASSED    [ 93%]
+tests/test_camera.py::TestCreateCamera::test_custom_up_hint PASSED       [ 96%]
+tests/test_camera.py::TestCreateCamera::test_list_input PASSED           [100%]
+
+============================== 31 passed in 0.08s ==============================

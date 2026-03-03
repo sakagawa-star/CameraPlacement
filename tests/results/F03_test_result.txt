@@ -1,0 +1,36 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/work/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/work/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 27 items
+
+tests/test_activity.py::TestActivityVolume::test_valid_grid_points PASSED [  3%]
+tests/test_activity.py::TestActivityVolume::test_invalid_shape_raises PASSED [  7%]
+tests/test_activity.py::TestActivityVolume::test_empty_grid PASSED       [ 11%]
+tests/test_activity.py::TestWalkingGrid::test_points_generated PASSED    [ 14%]
+tests/test_activity.py::TestWalkingGrid::test_no_points_in_bed_xy PASSED [ 18%]
+tests/test_activity.py::TestWalkingGrid::test_z_range PASSED             [ 22%]
+tests/test_activity.py::TestWalkingGrid::test_xy_range PASSED            [ 25%]
+tests/test_activity.py::TestWalkingGrid::test_known_point_count PASSED   [ 29%]
+tests/test_activity.py::TestSeatedGrid::test_points_generated PASSED     [ 33%]
+tests/test_activity.py::TestSeatedGrid::test_all_in_bed_xy PASSED        [ 37%]
+tests/test_activity.py::TestSeatedGrid::test_z_range PASSED              [ 40%]
+tests/test_activity.py::TestSeatedGrid::test_known_point_count PASSED    [ 44%]
+tests/test_activity.py::TestSupineGrid::test_points_generated PASSED     [ 48%]
+tests/test_activity.py::TestSupineGrid::test_all_in_bed_xy PASSED        [ 51%]
+tests/test_activity.py::TestSupineGrid::test_z_range PASSED              [ 55%]
+tests/test_activity.py::TestSupineGrid::test_known_point_count PASSED    [ 59%]
+tests/test_activity.py::TestCreateActivityVolumes::test_returns_three_volumes PASSED [ 62%]
+tests/test_activity.py::TestCreateActivityVolumes::test_none_room_uses_default PASSED [ 66%]
+tests/test_activity.py::TestCreateActivityVolumes::test_zero_spacing_raises PASSED [ 70%]
+tests/test_activity.py::TestCreateActivityVolumes::test_negative_spacing_raises PASSED [ 74%]
+tests/test_activity.py::TestMergedGrid::test_deduplication PASSED        [ 77%]
+tests/test_activity.py::TestMergedGrid::test_known_merged_count PASSED   [ 81%]
+tests/test_activity.py::TestMergedGrid::test_empty_list PASSED           [ 85%]
+tests/test_activity.py::TestGridSpacing::test_finer_spacing_more_points PASSED [ 88%]
+tests/test_activity.py::TestGridSpacing::test_coarser_spacing_fewer_points PASSED [ 92%]
+tests/test_activity.py::TestCustomRoom::test_custom_bed_exclusion PASSED [ 96%]
+tests/test_activity.py::TestDtype::test_all_grids_float64 PASSED         [100%]
+
+============================== 27 passed in 0.09s ==============================
