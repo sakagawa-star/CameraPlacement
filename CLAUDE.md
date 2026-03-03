@@ -200,7 +200,7 @@
 
 ## 現在の進捗
 
-### 実装完了（Phase 2: コアモデル — F01〜F06 完了、Phase 3: F07〜F11 完了、Phase 4: F12 完了）
+### 実装完了（Phase 2: F01〜F06、Phase 3: F07〜F11、Phase 4: F12〜F13 完了）
 
 | 管理番号 | 機能名 | テスト | ソースファイル |
 |---------|--------|-------|--------------|
@@ -216,22 +216,14 @@
 | F10 | 統合品質スコア | 32件 PASSED | `src/camera_placement/evaluation/evaluator.py` |
 | F11 | 3D可視化 | 43件 PASSED | `src/camera_placement/visualization/viewer.py` |
 | F12 | 配置プリセット | 45件 PASSED | `src/camera_placement/placement/patterns.py` |
+| F13 | 配置比較・レポート | 32件 PASSED | `src/camera_placement/placement/comparison.py` |
 
-### 次のアクション: F13（配置比較・レポート）
+### 次のアクション: F14（目的関数定義）
 
-- **ステータス: ドキュメント作成完了、実装待ち**
-- F12の全プリセットをF10の統合品質スコアで評価・比較するモジュール
-- 依存: F10（evaluator）、F12（patterns）
-- ドキュメント: `docs/F13-placement-comparison/requirements.md`, `docs/F13-placement-comparison/design.md`
-- 実装先: `src/camera_placement/placement/comparison.py`
-- テスト: `tests/test_comparison.py`（32件予定）
-- 主要機能:
-  - `evaluate_preset`: 単一プリセットの評価
-  - `compare_presets`: 全プリセットの一括比較（スコア降順ランキング）
-  - `generate_report`: テキスト比較レポートの生成
-  - `save_report`: レポートのファイル保存
-- データ構造: `PresetEvaluation`, `ComparisonResult`, `EvaluationParams`
-- `placement/__init__.py` の更新も必要（F13シンボルの追加エクスポート）
+- **ステータス: 未着手**
+- 最適化用の目的関数を定式化。6台×6パラメータ=36次元。設置領域制約のペナルティ付加
+- 依存: F10（evaluator）
+- ドキュメント: `docs/F14-objective-function/`（未作成）
 
 ---
 

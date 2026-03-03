@@ -1,0 +1,41 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/git/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/git/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 32 items
+
+tests/test_comparison.py::TestEvaluatePreset::test_a1_basic PASSED       [  3%]
+tests/test_comparison.py::TestEvaluatePreset::test_a2_preset_matches PASSED [  6%]
+tests/test_comparison.py::TestEvaluatePreset::test_a3_evaluation_type PASSED [  9%]
+tests/test_comparison.py::TestEvaluatePreset::test_a4_quality_score_range PASSED [ 12%]
+tests/test_comparison.py::TestEvaluatePreset::test_a5_all_presets PASSED [ 15%]
+tests/test_comparison.py::TestEvaluatePreset::test_a6_volume_qualities PASSED [ 18%]
+tests/test_comparison.py::TestEvaluatePreset::test_a7_custom_weights PASSED [ 21%]
+tests/test_comparison.py::TestComparePresets::test_b1_default_all_presets PASSED [ 25%]
+tests/test_comparison.py::TestComparePresets::test_b2_rankings_type PASSED [ 28%]
+tests/test_comparison.py::TestComparePresets::test_b3_rankings_descending PASSED [ 31%]
+tests/test_comparison.py::TestComparePresets::test_b4_best_is_first PASSED [ 34%]
+tests/test_comparison.py::TestComparePresets::test_b5_best_has_max_score PASSED [ 37%]
+tests/test_comparison.py::TestComparePresets::test_b6_specified_presets PASSED [ 40%]
+tests/test_comparison.py::TestComparePresets::test_b7_single_preset PASSED [ 43%]
+tests/test_comparison.py::TestComparePresets::test_b8_empty_presets PASSED [ 46%]
+tests/test_comparison.py::TestComparePresets::test_b9_evaluation_params PASSED [ 50%]
+tests/test_comparison.py::TestComparePresets::test_b10_custom_params PASSED [ 53%]
+tests/test_comparison.py::TestGenerateReport::test_c1_header PASSED      [ 56%]
+tests/test_comparison.py::TestGenerateReport::test_c2_all_preset_names PASSED [ 59%]
+tests/test_comparison.py::TestGenerateReport::test_c3_score_format PASSED [ 62%]
+tests/test_comparison.py::TestGenerateReport::test_c4_evaluation_params PASSED [ 65%]
+tests/test_comparison.py::TestGenerateReport::test_c5_volume_sections PASSED [ 68%]
+tests/test_comparison.py::TestGenerateReport::test_c6_best_summary PASSED [ 71%]
+tests/test_comparison.py::TestGenerateReport::test_c7_ranking_header PASSED [ 75%]
+tests/test_comparison.py::TestGenerateReport::test_c8_single_preset_report PASSED [ 78%]
+tests/test_comparison.py::TestGenerateReport::test_c9_report_is_string PASSED [ 81%]
+tests/test_comparison.py::TestSaveReport::test_d1_file_saved PASSED      [ 84%]
+tests/test_comparison.py::TestSaveReport::test_d2_returns_path PASSED    [ 87%]
+tests/test_comparison.py::TestSaveReport::test_d3_auto_create_dirs PASSED [ 90%]
+tests/test_comparison.py::TestSaveReport::test_d4_utf8_encoding PASSED   [ 93%]
+tests/test_comparison.py::TestIntegration::test_e1_end_to_end PASSED     [ 96%]
+tests/test_comparison.py::TestIntegration::test_e2_different_weights PASSED [100%]
+
+============================== 32 passed in 0.50s ==============================
