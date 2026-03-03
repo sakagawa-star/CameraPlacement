@@ -1,0 +1,41 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/git/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/git/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 32 items
+
+tests/test_evaluator.py::TestCalculateQualityScore::test_a1_default_weights_basic PASSED [  3%]
+tests/test_evaluator.py::TestCalculateQualityScore::test_a2_all_zero PASSED [  6%]
+tests/test_evaluator.py::TestCalculateQualityScore::test_a3_all_one PASSED [  9%]
+tests/test_evaluator.py::TestCalculateQualityScore::test_a4_custom_equal_weights PASSED [ 12%]
+tests/test_evaluator.py::TestCalculateQualityScore::test_a5_weight_normalization PASSED [ 15%]
+tests/test_evaluator.py::TestCalculateQualityScore::test_a6_coverage_only_weight PASSED [ 18%]
+tests/test_evaluator.py::TestCalculateQualityScore::test_a7_angle_only_weight PASSED [ 21%]
+tests/test_evaluator.py::TestCalculateQualityScore::test_a8_projection_only_weight PASSED [ 25%]
+tests/test_evaluator.py::TestPointQualityScore::test_b1_multiple_points PASSED [ 28%]
+tests/test_evaluator.py::TestPointQualityScore::test_b2_coverage_only_zero_point_quality PASSED [ 31%]
+tests/test_evaluator.py::TestPointQualityScore::test_b3_angle_only_point_quality PASSED [ 34%]
+tests/test_evaluator.py::TestPointQualityScore::test_b4_empty_points PASSED [ 37%]
+tests/test_evaluator.py::TestPointQualityScore::test_b5_mean_point_quality PASSED [ 40%]
+tests/test_evaluator.py::TestEdgeCasesAndValidation::test_c1_negative_coverage_weight PASSED [ 43%]
+tests/test_evaluator.py::TestEdgeCasesAndValidation::test_c2_negative_angle_weight PASSED [ 46%]
+tests/test_evaluator.py::TestEdgeCasesAndValidation::test_c3_negative_projection_weight PASSED [ 50%]
+tests/test_evaluator.py::TestEdgeCasesAndValidation::test_c4_zero_sum_weights PASSED [ 53%]
+tests/test_evaluator.py::TestEdgeCasesAndValidation::test_c5_point_length_mismatch PASSED [ 56%]
+tests/test_evaluator.py::TestEdgeCasesAndValidation::test_c6_normalized_weights_in_result PASSED [ 59%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d1_basic_corner_placement PASSED [ 62%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d2_result_structure PASSED [ 65%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d3_coverage_result_retained PASSED [ 68%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d4_angle_result_retained PASSED [ 71%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d5_projection_result_retained PASSED [ 75%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d6_volume_qualities_keys PASSED [ 78%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d7_volume_qualities_score_range PASSED [ 81%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d8_score_consistency PASSED [ 84%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d9_empty_cameras PASSED [ 87%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d10_custom_weights PASSED [ 90%]
+tests/test_evaluator.py::TestEvaluatePlacement::test_d11_target_ppm_parameter PASSED [ 93%]
+tests/test_evaluator.py::TestRealWorldScenarios::test_e1_corner_vs_clustered PASSED [ 96%]
+tests/test_evaluator.py::TestRealWorldScenarios::test_e2_supine_higher_than_walking PASSED [100%]
+
+============================== 32 passed in 0.26s ==============================
