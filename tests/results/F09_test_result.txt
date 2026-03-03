@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/git/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/git/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 26 items
+
+tests/test_projection_score.py::TestCalculatePixelPerMeter::test_a1_distance_1m PASSED [  3%]
+tests/test_projection_score.py::TestCalculatePixelPerMeter::test_a2_distance_2m PASSED [  7%]
+tests/test_projection_score.py::TestCalculatePixelPerMeter::test_a3_batch PASSED [ 11%]
+tests/test_projection_score.py::TestCalculatePixelPerMeter::test_a4_zero_distance PASSED [ 15%]
+tests/test_projection_score.py::TestCalculatePixelPerMeter::test_a5_3d_distance PASSED [ 19%]
+tests/test_projection_score.py::TestCalculatePixelPerMeter::test_a6_real_camera_fx PASSED [ 23%]
+tests/test_projection_score.py::TestCalculateProjectionScore::test_b1_close_distance PASSED [ 26%]
+tests/test_projection_score.py::TestCalculateProjectionScore::test_b2_far_distance PASSED [ 30%]
+tests/test_projection_score.py::TestCalculateProjectionScore::test_b3_two_cameras_different_distances PASSED [ 34%]
+tests/test_projection_score.py::TestCalculateProjectionScore::test_b4_partial_visibility PASSED [ 38%]
+tests/test_projection_score.py::TestCalculateProjectionScore::test_b5_target_ppm_effect PASSED [ 42%]
+tests/test_projection_score.py::TestCalculateProjectionScore::test_b6_mean_score PASSED [ 46%]
+tests/test_projection_score.py::TestCalculateProjectionScore::test_b7_point_mean_scores PASSED [ 50%]
+tests/test_projection_score.py::TestEdgeCases::test_c1_no_cameras PASSED [ 53%]
+tests/test_projection_score.py::TestEdgeCases::test_c2_single_camera PASSED [ 57%]
+tests/test_projection_score.py::TestEdgeCases::test_c3_empty_grid PASSED [ 61%]
+tests/test_projection_score.py::TestEdgeCases::test_c4_all_invisible PASSED [ 65%]
+tests/test_projection_score.py::TestEdgeCases::test_c5_grid_not_2d PASSED [ 69%]
+tests/test_projection_score.py::TestEdgeCases::test_c6_grid_wrong_columns PASSED [ 73%]
+tests/test_projection_score.py::TestEdgeCases::test_c7_vis_not_2d PASSED [ 76%]
+tests/test_projection_score.py::TestEdgeCases::test_c8_vis_shape0_mismatch PASSED [ 80%]
+tests/test_projection_score.py::TestEdgeCases::test_c9_vis_shape1_mismatch PASSED [ 84%]
+tests/test_projection_score.py::TestEdgeCases::test_c10_negative_target_ppm PASSED [ 88%]
+tests/test_projection_score.py::TestRealWorldScenarios::test_d1_corner_placement PASSED [ 92%]
+tests/test_projection_score.py::TestRealWorldScenarios::test_d2_near_vs_far PASSED [ 96%]
+tests/test_projection_score.py::TestRealWorldScenarios::test_d3_f07_integration PASSED [100%]
+
+============================== 26 passed in 0.09s ==============================

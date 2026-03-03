@@ -200,7 +200,7 @@
 
 ## 現在の進捗
 
-### 実装完了（Phase 2: コアモデル — F01〜F06 完了、Phase 3: F07〜F08 完了）
+### 実装完了（Phase 2: コアモデル — F01〜F06 完了、Phase 3: F07〜F09 完了）
 
 | 管理番号 | 機能名 | テスト | ソースファイル |
 |---------|--------|-------|--------------|
@@ -212,14 +212,13 @@
 | F06 | 視認性統合 | 18件 PASSED | `src/camera_placement/core/visibility.py` |
 | F07 | カバレッジ計算 | 25件 PASSED | `src/camera_placement/evaluation/coverage.py` |
 | F08 | 三角測量角度スコア | 26件 PASSED | `src/camera_placement/evaluation/angle_score.py` |
+| F09 | 2D投影サイズスコア | 26件 PASSED | `src/camera_placement/evaluation/projection_score.py` |
 
-### 次のアクション: F09（2D投影サイズスコア）
+### 次のアクション: F10（統合品質スコア）のドキュメント作成
 
-- **ステータス: 未着手**（調査・計画から開始）
-- 依存: F02, F07
-- 概要: カメラからの距離に基づき、被写体の画像上サイズを推定。2D検出精度をスコア化
-- 実装先（予定）: `src/camera_placement/evaluation/projection.py`
-- 詳細ディレクトリ: `docs/F09-projection-score/`
+- **ステータス: 未着手**
+- F10はF07（カバレッジ）、F08（角度スコア）、F09（投影スコア）を統合する品質スコア
+- `docs/plan.md` を参照して要求仕様書・機能設計書を作成する
 
 ---
 

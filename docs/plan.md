@@ -34,7 +34,7 @@
 | F06 | 視認性判定（統合） | 2 | F04(視錐台)+F05(オクルージョン)を統合し、1台のカメラから各点が視認可能か最終判定 | F04, F05 | **実装完了** | `docs/F06-visibility/` |
 | F07 | カバレッジ計算 | 3 | 6台全カメラで各グリッド点の視認カメラ数を計算。カバレッジ統計(3台以上カバー率等) | F06 | **実装完了** | `docs/F07-coverage/` |
 | F08 | 三角測量角度スコア | 3 | 視認可能カメラペア間の角度分離を計算し、三角測量精度をスコア化 | F02, F07 | **実装完了** | `docs/F08-angle-score/` |
-| F09 | 2D投影サイズスコア | 3 | カメラからの距離に基づき、被写体の画像上サイズを推定。2D検出精度をスコア化 | F02, F07 | 未着手 | `docs/F09-projection-score/` |
+| F09 | 2D投影サイズスコア | 3 | カメラからの距離に基づき、被写体の画像上サイズを推定。2D検出精度をスコア化 | F02, F07 | **実装完了** | `docs/F09-projection-score/` |
 | F10 | 統合品質スコア | 3 | カバレッジ+角度+投影サイズを統合し、配置全体の品質を1つのスコアで返す | F07, F08, F09 | 未着手 | `docs/F10-quality-score/` |
 | F11 | 3D可視化 | 3 | 部屋・ベッド・カメラ・視錐台・カバレッジマップをplotlyで3Dインタラクティブ表示 | F01, F02, F03, F07 | 未着手 | `docs/F11-visualization/` |
 | F12 | 配置パターン定義 | 4 | 代表的な6台配置パターン(コーナー型、壁面均等型、ハイブリッド型等)をプリセットとして定義 | F01, F02 | 未着手 | `docs/F12-placement-patterns/` |
@@ -76,7 +76,7 @@ src/camera_placement/
   evaluation/
     coverage.py       # F07
     angle_score.py    # F08
-    projection.py     # F09
+    projection_score.py # F09
     evaluator.py      # F10
   visualization/
     viewer.py         # F11

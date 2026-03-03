@@ -13,15 +13,23 @@ from camera_placement.evaluation.coverage import (
     calculate_coverage_stats,
     calculate_volume_coverage,
 )
+from camera_placement.evaluation.projection_score import (
+    ProjectionScoreResult,
+    calculate_pixel_per_meter,
+    calculate_projection_score,
+)
 
 __all__ = [
     "AngleScoreResult",
     "CoverageResult",
     "CoverageStats",
+    "ProjectionScoreResult",
     "VolumeCoverage",
     "calculate_angle_score",
     "calculate_coverage",
     "calculate_coverage_stats",
     "calculate_pair_angles",
+    "calculate_pixel_per_meter",
+    "calculate_projection_score",
     "calculate_volume_coverage",
 ]
