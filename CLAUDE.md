@@ -219,9 +219,19 @@
 
 ### 次のアクション: F13（配置比較・レポート）
 
-- **ステータス: ドキュメント未作成**
+- **ステータス: ドキュメント作成完了、実装待ち**
 - F12の全プリセットをF10の統合品質スコアで評価・比較するモジュール
 - 依存: F10（evaluator）、F12（patterns）
+- ドキュメント: `docs/F13-placement-comparison/requirements.md`, `docs/F13-placement-comparison/design.md`
+- 実装先: `src/camera_placement/placement/comparison.py`
+- テスト: `tests/test_comparison.py`（32件予定）
+- 主要機能:
+  - `evaluate_preset`: 単一プリセットの評価
+  - `compare_presets`: 全プリセットの一括比較（スコア降順ランキング）
+  - `generate_report`: テキスト比較レポートの生成
+  - `save_report`: レポートのファイル保存
+- データ構造: `PresetEvaluation`, `ComparisonResult`, `EvaluationParams`
+- `placement/__init__.py` の更新も必要（F13シンボルの追加エクスポート）
 
 ---
 
