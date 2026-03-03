@@ -214,11 +214,19 @@
 | F08 | 三角測量角度スコア | 26件 PASSED | `src/camera_placement/evaluation/angle_score.py` |
 | F09 | 2D投影サイズスコア | 26件 PASSED | `src/camera_placement/evaluation/projection_score.py` |
 
-### 次のアクション: F10（統合品質スコア）のドキュメント作成
+### 次のアクション: F10（統合品質スコア）の実装
 
-- **ステータス: 未着手**
-- F10はF07（カバレッジ）、F08（角度スコア）、F09（投影スコア）を統合する品質スコア
-- `docs/plan.md` を参照して要求仕様書・機能設計書を作成する
+- **ステータス: ドキュメント作成完了、実装待ち**
+- ドキュメント:
+  - 要求仕様書: `docs/F10-quality-score/requirements.md`
+  - 機能設計書: `docs/F10-quality-score/design.md`
+- 実装ファイル: `src/camera_placement/evaluation/evaluator.py`（新規作成）
+- テストファイル: `tests/test_evaluator.py`（新規作成）
+- 概要: F07（カバレッジ）、F08（角度スコア）、F09（投影スコア）を加重和で統合する品質スコア
+- 主要関数:
+  - `calculate_quality_score`: コアロジック（スカラースコア3つ + 点配列2つ → QualityScoreResult）
+  - `evaluate_placement`: 一括計算（cameras, room → EvaluationResult）
+- `evaluation/__init__.py` の更新も必要（設計書セクション14参照）
 
 ---
 
