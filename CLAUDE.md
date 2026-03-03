@@ -200,7 +200,7 @@
 
 ## 現在の進捗
 
-### 実装完了（Phase 2: F01〜F06、Phase 3: F07〜F11、Phase 4: F12〜F13 完了）
+### 実装完了（Phase 2: F01〜F06、Phase 3: F07〜F11、Phase 4: F12〜F13、Phase 5: F14 完了）
 
 | 管理番号 | 機能名 | テスト | ソースファイル |
 |---------|--------|-------|--------------|
@@ -217,22 +217,15 @@
 | F11 | 3D可視化 | 43件 PASSED | `src/camera_placement/visualization/viewer.py` |
 | F12 | 配置プリセット | 45件 PASSED | `src/camera_placement/placement/patterns.py` |
 | F13 | 配置比較・レポート | 32件 PASSED | `src/camera_placement/placement/comparison.py` |
+| F14 | 目的関数定義 | 50件 PASSED | `src/camera_placement/optimization/objective.py` |
 
-### 次のアクション: F14（目的関数定義）の実装
+### 次のアクション: F15（最適化エンジン・結果出力）
 
-- **ステータス: ドキュメント完了、実装待ち**
-- 最適化用の目的関数を定式化。6台×6パラメータ=36次元。設置領域制約のペナルティ付加
-- 依存: F10（evaluator）
-- ドキュメント: `docs/F14-objective-function/`（要求仕様書・機能設計書 作成済み・レビュー済み）
-- 実装先: `src/camera_placement/optimization/objective.py`（新規作成）
-- テスト: `tests/test_objective.py`（新規作成、43件予定）
-- 主要な公開シンボル:
-  - `ObjectiveFunction` クラス（`__call__` で目的関数評価、`evaluate_detail` で詳細結果）
-  - `ObjectiveResult` データクラス（value, quality_score, penalty, is_feasible, evaluation）
-  - `params_to_cameras` / `cameras_to_params`（パラメータ⇔カメラ変換）
-  - `get_parameter_bounds`（探索範囲の取得）
-  - `calculate_position_penalty`（設置領域制約ペナルティ計算）
-- `optimization/__init__.py` も新規作成が必要
+- **ステータス: 未着手**
+- PSO/差分進化で最適配置を探索。結果の可視化・レポート出力
+- 依存: F14（目的関数）、F11（可視化）
+- ドキュメント: `docs/F15-optimizer/`（未作成）
+- 実装先: `src/camera_placement/optimization/optimizer.py`（新規作成）
 
 ---
 
