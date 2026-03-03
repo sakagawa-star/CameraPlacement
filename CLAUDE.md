@@ -200,7 +200,7 @@
 
 ## 現在の進捗
 
-### 実装完了（Phase 2: コアモデル — F01〜F06 完了、Phase 3: F07〜F11 完了）
+### 実装完了（Phase 2: コアモデル — F01〜F06 完了、Phase 3: F07〜F11 完了、Phase 4: F12 完了）
 
 | 管理番号 | 機能名 | テスト | ソースファイル |
 |---------|--------|-------|--------------|
@@ -215,16 +215,13 @@
 | F09 | 2D投影サイズスコア | 26件 PASSED | `src/camera_placement/evaluation/projection_score.py` |
 | F10 | 統合品質スコア | 32件 PASSED | `src/camera_placement/evaluation/evaluator.py` |
 | F11 | 3D可視化 | 43件 PASSED | `src/camera_placement/visualization/viewer.py` |
+| F12 | 配置プリセット | 45件 PASSED | `src/camera_placement/placement/patterns.py` |
 
-### 次のアクション: F12（配置プリセット）の実装
+### 次のアクション: F13（配置比較・レポート）
 
-- **ステータス: ドキュメント作成完了 → 実装待ち**
-- Phase 4 の最初の機能。手動設計の5種類のカメラ配置パターンをプリセットとして定義する
-- ドキュメント: `docs/F12-placement-patterns/requirements.md`, `docs/F12-placement-patterns/design.md`
-- 実装先: `src/camera_placement/placement/patterns.py`
-- テスト: `tests/test_patterns.py`（32件）
-- 依存: F01（Room）、F02（Camera, create_camera）
-- 5つのプリセット: upper_corners, wall_uniform, overhead_grid, bed_focused, hybrid
+- **ステータス: ドキュメント未作成**
+- F12の全プリセットをF10の統合品質スコアで評価・比較するモジュール
+- 依存: F10（evaluator）、F12（patterns）
 
 ---
 
