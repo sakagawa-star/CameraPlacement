@@ -219,13 +219,24 @@
 | F13 | 配置比較・レポート | 32件 PASSED | `src/camera_placement/placement/comparison.py` |
 | F14 | 目的関数定義 | 50件 PASSED | `src/camera_placement/optimization/objective.py` |
 
-### 次のアクション: F15（最適化エンジン・結果出力）
+### 次のアクション: F15（最適化エンジン・結果出力）の実装
 
-- **ステータス: 未着手**
-- PSO/差分進化で最適配置を探索。結果の可視化・レポート出力
-- 依存: F14（目的関数）、F11（可視化）
-- ドキュメント: `docs/F15-optimizer/`（未作成）
+- **ステータス: ドキュメント作成完了 → 実装待ち**
+- scipy.optimize.differential_evolution で最適配置を探索。結果の可視化・レポート出力
+- 依存: F14（目的関数）、F11（可視化）、F10（最終評価）、F12（初期解プリセット）
+- ドキュメント: `docs/F15-optimizer/requirements.md`、`docs/F15-optimizer/design.md`
 - 実装先: `src/camera_placement/optimization/optimizer.py`（新規作成）
+- `src/camera_placement/optimization/__init__.py` の更新も必要（F15 の公開シンボル追加）
+- 新規依存ライブラリ: `uv add scipy` で scipy >= 1.15 を追加する
+- テスト: `tests/test_optimizer.py`（50件予定）
+- 主要な公開API:
+  - `OptimizationConfig`: 最適化設定（frozen dataclass）
+  - `OptimizationResult`: 最適化結果（dataclass）
+  - `optimize_placement(room, config, init_preset, init_params)`: 最適化実行
+  - `generate_optimization_report(result)`: テキストレポート生成
+  - `save_optimization_report(report, filepath)`: レポート保存
+  - `visualize_result(result, room, ...)`: 3D可視化（F11 の create_scene を使用）
+  - `create_convergence_plot(result)`: 収束プロット生成
 
 ---
 
