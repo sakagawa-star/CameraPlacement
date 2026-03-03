@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/git/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/git/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 26 items
+
+tests/test_angle_score.py::TestCalculatePairAngles::test_a1_90_degree_separation PASSED [  3%]
+tests/test_angle_score.py::TestCalculatePairAngles::test_a2_0_degree_separation PASSED [  7%]
+tests/test_angle_score.py::TestCalculatePairAngles::test_a3_180_degree_separation PASSED [ 11%]
+tests/test_angle_score.py::TestCalculatePairAngles::test_a4_60_degree_separation PASSED [ 15%]
+tests/test_angle_score.py::TestCalculatePairAngles::test_a5_batch_calculation PASSED [ 19%]
+tests/test_angle_score.py::TestCalculatePairAngles::test_a6_camera_at_point PASSED [ 23%]
+tests/test_angle_score.py::TestCalculatePairAngles::test_a7_3d_angle PASSED [ 26%]
+tests/test_angle_score.py::TestCalculateAngleScore::test_b1_two_cameras_90_degree PASSED [ 30%]
+tests/test_angle_score.py::TestCalculateAngleScore::test_b2_two_cameras_same_direction PASSED [ 34%]
+tests/test_angle_score.py::TestCalculateAngleScore::test_b3_three_cameras_all_visible PASSED [ 38%]
+tests/test_angle_score.py::TestCalculateAngleScore::test_b4_three_cameras_partial_visibility PASSED [ 42%]
+tests/test_angle_score.py::TestCalculateAngleScore::test_b5_multiple_points_different_scores PASSED [ 46%]
+tests/test_angle_score.py::TestCalculateAngleScore::test_b6_point_mean_scores PASSED [ 50%]
+tests/test_angle_score.py::TestCalculateAngleScore::test_b7_mean_score PASSED [ 53%]
+tests/test_angle_score.py::TestEdgeCases::test_c1_no_cameras PASSED      [ 57%]
+tests/test_angle_score.py::TestEdgeCases::test_c2_single_camera PASSED   [ 61%]
+tests/test_angle_score.py::TestEdgeCases::test_c3_no_grid_points PASSED  [ 65%]
+tests/test_angle_score.py::TestEdgeCases::test_c4_all_points_single_camera_visibility PASSED [ 69%]
+tests/test_angle_score.py::TestEdgeCases::test_c5_grid_points_not_2d PASSED [ 73%]
+tests/test_angle_score.py::TestEdgeCases::test_c6_grid_points_wrong_columns PASSED [ 76%]
+tests/test_angle_score.py::TestEdgeCases::test_c7_visibility_not_2d PASSED [ 80%]
+tests/test_angle_score.py::TestEdgeCases::test_c8_shape0_mismatch PASSED [ 84%]
+tests/test_angle_score.py::TestEdgeCases::test_c9_shape1_mismatch PASSED [ 88%]
+tests/test_angle_score.py::TestRealWorldScenarios::test_d1_corner_placement PASSED [ 92%]
+tests/test_angle_score.py::TestRealWorldScenarios::test_d2_clustered_placement_lower_score PASSED [ 96%]
+tests/test_angle_score.py::TestRealWorldScenarios::test_d3_f07_integration PASSED [100%]
+
+============================== 26 passed in 0.15s ==============================
