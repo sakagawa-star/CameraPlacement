@@ -218,12 +218,21 @@
 | F12 | 配置プリセット | 45件 PASSED | `src/camera_placement/placement/patterns.py` |
 | F13 | 配置比較・レポート | 32件 PASSED | `src/camera_placement/placement/comparison.py` |
 
-### 次のアクション: F14（目的関数定義）
+### 次のアクション: F14（目的関数定義）の実装
 
-- **ステータス: 未着手**
+- **ステータス: ドキュメント完了、実装待ち**
 - 最適化用の目的関数を定式化。6台×6パラメータ=36次元。設置領域制約のペナルティ付加
 - 依存: F10（evaluator）
-- ドキュメント: `docs/F14-objective-function/`（未作成）
+- ドキュメント: `docs/F14-objective-function/`（要求仕様書・機能設計書 作成済み・レビュー済み）
+- 実装先: `src/camera_placement/optimization/objective.py`（新規作成）
+- テスト: `tests/test_objective.py`（新規作成、43件予定）
+- 主要な公開シンボル:
+  - `ObjectiveFunction` クラス（`__call__` で目的関数評価、`evaluate_detail` で詳細結果）
+  - `ObjectiveResult` データクラス（value, quality_score, penalty, is_feasible, evaluation）
+  - `params_to_cameras` / `cameras_to_params`（パラメータ⇔カメラ変換）
+  - `get_parameter_bounds`（探索範囲の取得）
+  - `calculate_position_penalty`（設置領域制約ペナルティ計算）
+- `optimization/__init__.py` も新規作成が必要
 
 ---
 
