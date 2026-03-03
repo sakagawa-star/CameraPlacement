@@ -200,7 +200,7 @@
 
 ## 現在の進捗
 
-### 実装完了（Phase 2: コアモデル — F01〜F06 完了、Phase 3: F07〜F10 完了）
+### 実装完了（Phase 2: コアモデル — F01〜F06 完了、Phase 3: F07〜F11 完了）
 
 | 管理番号 | 機能名 | テスト | ソースファイル |
 |---------|--------|-------|--------------|
@@ -214,20 +214,13 @@
 | F08 | 三角測量角度スコア | 26件 PASSED | `src/camera_placement/evaluation/angle_score.py` |
 | F09 | 2D投影サイズスコア | 26件 PASSED | `src/camera_placement/evaluation/projection_score.py` |
 | F10 | 統合品質スコア | 32件 PASSED | `src/camera_placement/evaluation/evaluator.py` |
+| F11 | 3D可視化 | 43件 PASSED | `src/camera_placement/visualization/viewer.py` |
 
-### 次のアクション: F11（3D可視化）の実装
+### 次のアクション: F12（配置プリセット）のドキュメント作成
 
-- **ステータス: ドキュメント完了・実装待ち**
-- Phase 3 最後の機能。部屋・ベッド・カメラ・視錐台・カバレッジマップを plotly で3Dインタラクティブ表示する
-- ドキュメント: `docs/F11-visualization/requirements.md` と `docs/F11-visualization/design.md` （レビュー済み）
-- 依存: F01（空間モデル）、F02（カメラモデル）、F04（視錐台）、F07（カバレッジ）— 全て実装完了済み
-- 想定ファイル:
-  - `src/camera_placement/visualization/__init__.py`（新規作成）
-  - `src/camera_placement/visualization/viewer.py`（新規作成）
-  - `tests/test_viewer.py`（新規作成）
-- 実装前に `uv add plotly` でplotlyをインストールすること
-- テスト計画: 43件（カテゴリA〜G）
-- 開発フロー: `/clear` → ドキュメントを読んで実装
+- **ステータス: 未着手**
+- Phase 4 の最初の機能。手動設計のカメラ配置パターンをプリセットとして定義する
+- `docs/plan.md` を参照して要求仕様書・機能設計書を作成すること
 
 ---
 

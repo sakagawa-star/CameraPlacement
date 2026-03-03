@@ -1,0 +1,52 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0 -- /home/sakagawa/git/CameraPlacement/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/sakagawa/git/CameraPlacement
+configfile: pyproject.toml
+collecting ... collected 43 items
+
+tests/test_viewer.py::TestCreateRoomTraces::test_a1_basic PASSED         [  2%]
+tests/test_viewer.py::TestCreateRoomTraces::test_a2_trace_name PASSED    [  4%]
+tests/test_viewer.py::TestCreateRoomTraces::test_a3_coordinate_length PASSED [  6%]
+tests/test_viewer.py::TestCreateRoomTraces::test_a4_none_separators PASSED [  9%]
+tests/test_viewer.py::TestCreateBedTraces::test_b1_basic PASSED          [ 11%]
+tests/test_viewer.py::TestCreateBedTraces::test_b2_trace_name PASSED     [ 13%]
+tests/test_viewer.py::TestCreateBedTraces::test_b3_vertex_count PASSED   [ 16%]
+tests/test_viewer.py::TestCreateBedTraces::test_b4_face_count PASSED     [ 18%]
+tests/test_viewer.py::TestCreateBedTraces::test_b5_opacity PASSED        [ 20%]
+tests/test_viewer.py::TestCreateCameraTraces::test_c1_basic PASSED       [ 23%]
+tests/test_viewer.py::TestCreateCameraTraces::test_c2_marker_trace_name PASSED [ 25%]
+tests/test_viewer.py::TestCreateCameraTraces::test_c3_direction_trace_name PASSED [ 27%]
+tests/test_viewer.py::TestCreateCameraTraces::test_c4_marker_positions_count PASSED [ 30%]
+tests/test_viewer.py::TestCreateCameraTraces::test_c5_text_labels PASSED [ 32%]
+tests/test_viewer.py::TestCreateCameraTraces::test_c6_empty_cameras PASSED [ 34%]
+tests/test_viewer.py::TestCreateCameraTraces::test_c7_single_camera PASSED [ 37%]
+tests/test_viewer.py::TestCreateFrustumTraces::test_d1_basic PASSED      [ 39%]
+tests/test_viewer.py::TestCreateFrustumTraces::test_d2_trace_name PASSED [ 41%]
+tests/test_viewer.py::TestCreateFrustumTraces::test_d3_legendgroup PASSED [ 44%]
+tests/test_viewer.py::TestCreateFrustumTraces::test_d4_coordinate_length PASSED [ 46%]
+tests/test_viewer.py::TestCreateFrustumTraces::test_d5_empty_cameras PASSED [ 48%]
+tests/test_viewer.py::TestCreateFrustumTraces::test_d6_far_zero PASSED   [ 51%]
+tests/test_viewer.py::TestCreateFrustumTraces::test_d7_far_less_than_near PASSED [ 53%]
+tests/test_viewer.py::TestCreateCoverageTraces::test_e1_basic PASSED     [ 55%]
+tests/test_viewer.py::TestCreateCoverageTraces::test_e2_trace_name PASSED [ 58%]
+tests/test_viewer.py::TestCreateCoverageTraces::test_e3_marker_size PASSED [ 60%]
+tests/test_viewer.py::TestCreateCoverageTraces::test_e4_colorscale PASSED [ 62%]
+tests/test_viewer.py::TestCreateCoverageTraces::test_e5_cmin_cmax PASSED [ 65%]
+tests/test_viewer.py::TestCreateCoverageTraces::test_e6_empty_grid PASSED [ 67%]
+tests/test_viewer.py::TestCreateScene::test_f1_minimal PASSED            [ 69%]
+tests/test_viewer.py::TestCreateScene::test_f2_with_coverage PASSED      [ 72%]
+tests/test_viewer.py::TestCreateScene::test_f3_no_frustums PASSED        [ 74%]
+tests/test_viewer.py::TestCreateScene::test_f4_no_grid PASSED            [ 76%]
+tests/test_viewer.py::TestCreateScene::test_f5_title PASSED              [ 79%]
+tests/test_viewer.py::TestCreateScene::test_f6_axis_labels PASSED        [ 81%]
+tests/test_viewer.py::TestCreateScene::test_f7_aspectmode PASSED         [ 83%]
+tests/test_viewer.py::TestCreateScene::test_f8_frustum_far_invalid PASSED [ 86%]
+tests/test_viewer.py::TestCreateScene::test_f9_empty_cameras PASSED      [ 88%]
+tests/test_viewer.py::TestCreateScene::test_f10_no_coverage_result_with_show_grid PASSED [ 90%]
+tests/test_viewer.py::TestSaveHtml::test_g1_basic PASSED                 [ 93%]
+tests/test_viewer.py::TestSaveHtml::test_g2_return_value PASSED          [ 95%]
+tests/test_viewer.py::TestSaveHtml::test_g3_auto_mkdir PASSED            [ 97%]
+tests/test_viewer.py::TestSaveHtml::test_g4_file_size PASSED             [100%]
+
+============================== 43 passed in 0.26s ==============================
