@@ -60,6 +60,8 @@
 - パッケージ管理：uv（`uv init` で新規環境を作成）
 - 主要ライブラリ（想定）：numpy, scipy, matplotlib, open3d or plotly（3D可視化）
 - ライブラリの追加は `uv add` で行う
+- ライブラリの追加・変更・削除を行った場合は docs/TECH_STACK.md も更新すること
+- 新規ライブラリ導入時は用途・選定理由・バージョンを TECH_STACK.md に追記すること
 
 ### コード規約
 
